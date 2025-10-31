@@ -1,0 +1,82 @@
+@import 'variables.css';
+
+/* Buttons */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding: 10px 14px;
+  border-radius:8px;
+  border: 1px solid rgba(255,255,255,0.04);
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  color: white;
+  font-weight:700;
+  cursor:pointer;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.btn:hover{ transform: translateY(-2px); box-shadow: 0 8px 20px rgba(2,6,23,0.7); }
+.btn:active{ transform: translateY(0); }
+.btn:disabled{ opacity:.5; cursor:not-allowed; transform:none; }
+
+/* Badge and tag */
+.badge{ padding:4px 8px; border-radius:999px; font-size:var(--fs-xs); font-weight:700; background:var(--accent-1); color:white; display:inline-block; }
+.tag{ padding:6px 10px; border-radius:8px; background:rgba(255,255,255,0.03); color:var(--muted); font-weight:600; }
+
+/* Card internals */
+.card img{ width:100%; border-radius:8px; object-fit:cover; margin-bottom:12px; }
+.card h3{ margin:0 0 8px 0; color:white; font-size:18px; }
+.card p{ margin:0; color:var(--muted); font-size:14px; }
+
+/* Form styles */
+.form{
+  display:flex;
+  flex-direction:column;
+  gap:var(--s-2);
+}
+.form input, .form textarea, .form select{
+  background: rgba(255,255,255,0.02);
+  border:1px solid rgba(255,255,255,0.04);
+  padding:10px 12px;
+  border-radius:8px;
+  color: #e6eef2;
+}
+.form input:focus, .form textarea:focus{ border-color: var(--primary-1); box-shadow: 0 6px 18px rgba(10,14,20,0.6); outline: none; }
+.form .error{ color: var(--danger); font-size: var(--fs-xs); }
+
+/* Alerts / Toasts / Modal */
+.toast{
+  position: fixed;
+  right: var(--s-3);
+  bottom: var(--s-3);
+  background: linear-gradient(180deg, rgba(124,58,237,0.16), rgba(14,165,164,0.06));
+  color: white;
+  padding: var(--s-2);
+  border-radius:8px;
+  box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+  display:none;
+}
+.toast.show{ display:block; }
+
+/* Modal basic */
+.modal-backdrop{
+  position:fixed;
+  inset:0;
+  background: rgba(2,6,23,0.6);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:2000;
+}
+.modal-backdrop.show{ display:flex; }
+.modal{
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius:12px;
+  padding: var(--s-4);
+  width: min(720px, 92%);
+  border:1px solid rgba(255,255,255,0.03);
+}
+
+/* Utilities */
+.row{ display:flex; gap:var(--s-2); }
+.col{ flex:1; }
+.center{ display:flex; align-items:center; justify-content:center; }

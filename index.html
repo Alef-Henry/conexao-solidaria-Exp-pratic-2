@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Conexão Solidária</title>
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <div class="logo">
+      <img src="imagens/logo.svg" alt="Conexão Solidária" width="160" height="40">
+    </div>
+    <nav class="nav">
+      <div class="menu" role="menubar">
+        <a href="index.html">Home</a>
+        <a href="sobre.html">Sobre</a>
+        <div class="has-dropdown" aria-haspopup="true">
+          <a href="projetos.html" aria-expanded="false">Projetos ▾</a>
+          <div class="dropdown" role="menu">
+            <a href="projetos.html">Todos</a>
+            <a href="projetos.html#reflorestamento">Reflorestamento</a>
+            <a href="projetos.html#reciclagem">Reciclagem</a>
+          </div>
+        </div>
+        <a href="contato.html">Contato</a>
+      </div>
+
+      <button class="hamburger" aria-label="Abrir menu" data-hamburger>☰</button>
+    </nav>
+  </div>
+
+  <div class="mobile-menu" data-mobile>
+    <div class="container">
+      <a href="index.html" class="btn">Home</a>
+      <a href="sobre.html" class="btn">Sobre</a>
+      <a href="projetos.html" class="btn">Projetos</a>
+      <a href="contato.html" class="btn">Contato</a>
+    </div>
+  </div>
+</header>
+
+<main class="app-grid">
+  <div class="content container">
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Conexão Solidária • Meio Ambiente</div>
+        <h1>Junte-se a iniciativas que transformam o planeta</h1>
+        <p>Plataforma que conecta voluntários, doadores e projetos ambientais. Descubra iniciativas de reflorestamento, reciclagem e educação ambiental.</p>
+        <div style="margin-top:16px;">
+          <a class="btn" href="projetos.html">Ver projetos</a>
+          <button class="btn" data-open-modal="modal-join" style="margin-left:12px">Quero participar</button>
+        </div>
+      </div>
+      <aside>
+        <div style="background:linear-gradient(135deg,var(--primary-1),var(--accent-1)); padding:20px; border-radius:12px;">
+          <h3 style="margin:0">Contribua hoje</h3>
+          <p style="color:var(--neutral-3); margin-top:8px;">Apoie um projeto local ou responda como voluntário.</p>
+          <div style="margin-top:12px">
+            <span class="badge">Reflorestamento</span>
+            <span class="tag" style="margin-left:8px">Comunidades</span>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section>
+      <h2 style="margin-bottom:12px">Projetos em destaque</h2>
+      <div class="projects-grid" aria-live="polite">
+        <div class="card" style="grid-column: span 6;">
+          <img src="imagens/proj_reflorestamento.svg" alt="">
+          <h3>Reflorestamento Ribeira</h3>
+          <p>Projeto de plantio de mudas nativas em áreas degradadas — ação comunitária.</p>
+        </div>
+        <div class="card" style="grid-column: span 3;">
+          <img src="imagens/proj_reciclagem.svg" alt="">
+          <h3>Coleta Seletiva Urbana</h3>
+          <p>Educação e pontos de coleta em bairros periféricos.</p>
+        </div>
+        <div class="card" style="grid-column: span 3;">
+          <img src="imagens/proj_educacao.svg" alt="">
+          <h3>Oficinas Verdes</h3>
+          <p>Workshops sobre compostagem e redução de resíduos.</p>
+        </div>
+      </div>
+    </section>
+
+    <section style="margin-top:32px;">
+      <h2>Depoimentos</h2>
+      <div class="row" style="margin-top:12px">
+        <div class="card col" style="min-height:120px">
+          <p>"Participar do reflorestamento mudou minha visão sobre a comunidade."</p>
+          <p style="color:var(--muted)">— Mariana, voluntária</p>
+        </div>
+        <div class="card col" style="min-height:120px">
+          <p>"Transformamos terrenos vazios em espaços verdes."</p>
+          <p style="color:var(--muted)">— João, coordenador</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+      <div>© 2025 Conexão Solidária</div>
+      <div>Desenvolvido para a entrega de CSS</div>
+    </div>
+  </div>
+</footer>
+
+<!-- Modal -->
+<div id="modal-join" class="modal-backdrop" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true">
+    <h3>Quero participar</h3>
+    <p>Envie seus dados e nós conectamos você a um projeto local.</p>
+    <form class="form" style="margin-top:12px;">
+      <input placeholder="Nome completo" />
+      <input placeholder="Email" />
+      <div style="display:flex; gap:8px; justify-content:flex-end; margin-top:12px;">
+        <button type="button" class="btn" data-close-modal>Fechar</button>
+        <button type="button" class="btn" onclick="showToast('Obrigado! Simulação de inscrição')">Enviar</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

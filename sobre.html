@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Conexão Solidária</title>
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <div class="logo">
+      <img src="imagens/logo.svg" alt="Conexão Solidária" width="160" height="40">
+    </div>
+    <nav class="nav">
+      <div class="menu" role="menubar">
+        <a href="index.html">Home</a>
+        <a href="sobre.html">Sobre</a>
+        <div class="has-dropdown" aria-haspopup="true">
+          <a href="projetos.html" aria-expanded="false">Projetos ▾</a>
+          <div class="dropdown" role="menu">
+            <a href="projetos.html">Todos</a>
+            <a href="projetos.html#reflorestamento">Reflorestamento</a>
+            <a href="projetos.html#reciclagem">Reciclagem</a>
+          </div>
+        </div>
+        <a href="contato.html">Contato</a>
+      </div>
+
+      <button class="hamburger" aria-label="Abrir menu" data-hamburger>☰</button>
+    </nav>
+  </div>
+
+  <div class="mobile-menu" data-mobile>
+    <div class="container">
+      <a href="index.html" class="btn">Home</a>
+      <a href="sobre.html" class="btn">Sobre</a>
+      <a href="projetos.html" class="btn">Projetos</a>
+      <a href="contato.html" class="btn">Contato</a>
+    </div>
+  </div>
+</header>
+
+<main class="app-grid">
+  <div class="content container">
+    <section>
+      <h1>Sobre a Conexão Solidária</h1>
+      <p style="color:var(--muted)">Projeto focado em iniciativas ambientais com impacto local e educacional.</p>
+
+      <h2 style="margin-top:24px">Nossa missão</h2>
+      <p>Fortalecer projetos comunitários que protegem ecossistemas, educam e geram renda local.</p>
+
+      <h2 style="margin-top:24px">Equipe</h2>
+      <div class="row" style="margin-top:12px">
+        <div class="card" style="width:220px;">
+          <img src="imagens/proj_educacao.svg" alt="">
+          <h3>Mariana</h3>
+          <p>Coordenadora de projetos</p>
+        </div>
+        <div class="card" style="width:220px;">
+          <img src="imagens/proj_reciclagem.svg" alt="">
+          <h3>João</h3>
+          <p>Designer Social</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">© 2025 Conexão Solidária</div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

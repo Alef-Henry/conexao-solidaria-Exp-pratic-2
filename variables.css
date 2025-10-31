@@ -1,0 +1,54 @@
+:root{
+  /* Paleta de cores (>=8) */
+  --primary-1: #0ea5a4; /* teal */
+  --primary-2: #06b6d4;
+  --accent-1: #7c3aed; /* purple */
+  --accent-2: #ff6b6b; /* coral */
+  --neutral-1: #0b1220; /* bg dark */
+  --neutral-2: #0f1724;
+  --neutral-3: #111827;
+  --muted: #9ca3af;
+  --success: #16a34a;
+  --danger: #ef4444;
+  --warning: #f59e0b;
+  --glass: rgba(255,255,255,0.04);
+
+  /* Tipografia (>=5 tamanhos) */
+  --fs-xs: 12px;
+  --fs-sm: 14px;
+  --fs-md: 16px;
+  --fs-lg: 20px;
+  --fs-xl: 28px;
+  --fs-xxl: 40px;
+
+  /* Espaçamento modular */
+  --s-1: 8px;
+  --s-2: 16px;
+  --s-3: 24px;
+  --s-4: 32px;
+  --s-5: 48px;
+  --s-6: 64px;
+
+  /* Grid system */
+  --container-max: 1200px;
+  --columns: 12;
+  --gutter: 16px;
+
+  /* Border radius */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+}
+
+/* Utility: 12-column CSS grid helper (uses CSS variables) */
+.container{
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding-left: var(--s-2);
+  padding-right: var(--s-2);
+}
+
+/* Accessibility: focus outline */
+:focus{
+  outline: 3px solid rgba(124,58,237,0.35);
+  outline-offset: 2px;
+}
